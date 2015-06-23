@@ -35,7 +35,7 @@ class Jusolink
     	$Refresh = true;
 
 		if(!is_null($this->token)){
-    		$Expiration = gmdate($_targetToken->expiration);
+    		$Expiration = gmdate($this->token->expiration);
     		$now = gmdate("Y-m-d H:i:s",time());
     		$Refresh = $Expiration < $now; 
 		}
